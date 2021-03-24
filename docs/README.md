@@ -1,7 +1,7 @@
 # USB-Screen
 
 ![Build firmware](https://github.com/chenxuuu/USB-Screen/workflows/Build%20firmware/badge.svg)
-![Build client](https://github.com/chenxuuu/USB-Screen/workflows/Build%20ProjectCDC/badge.svg)
+![Build client](https://github.com/chenxuuu/USB-Screen/workflows/Build%20project/CDC/badge.svg)
 
 低成本PC资源监控小屏幕。如果感兴趣，点个星星呗。
 

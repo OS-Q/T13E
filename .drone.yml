@@ -1,0 +1,8 @@
+kind: pipeline
+name: default
+
+steps:
+- name: test
+  image: windows
+  commands:
+  - msbuild project/CDC/MasterTool/UsbScreen.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile

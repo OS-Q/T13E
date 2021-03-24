@@ -1,12 +1,12 @@
-name: Build firmware
+name: CDC_firmware
 
 on:
   push:
     paths:
-      - 'ProjectCDC/Firmware/**'
+      - 'project/CDC/Firmware/**'
   pull_request:
     paths:
-      - 'ProjectCDC/Firmware/**'
+      - 'project/CDC/Firmware/**'
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Build
         run: |
-          cd ProjectCDC/firmware
+          cd project/CDC/firmware
           Invoke-WebRequest -uri https://github.com/chenxuuu/USB-Screen/releases/download/0.0.0/c51.zip -OutFile c51.zip
           Expand-Archive -Path c51.zip -DestinationPath ./
           BIN\C51.exe Freqsys.c "OPTIMIZE (9)"
@@ -33,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v1.0.0
         with:
           name: Firmware
-          path: ProjectCDC/Firmware/build
+          path: project/CDC/Firmware/build
